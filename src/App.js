@@ -2,6 +2,18 @@
 
 import { useState } from "react"
 import "./App.css"
+import {
+  Shield,
+  Target,
+  Mail,
+  Building2,
+  CheckCircle,
+  GraduationCap,
+  ShieldCheck,
+  Star,
+  Handshake,
+  Leaf,
+} from "lucide-react"
 
 function App() {
   const [language, setLanguage] = useState("en")
@@ -260,6 +272,9 @@ function App() {
 
   const t = translations[language]
 
+  const serviceIcons = [Shield, Target, Mail, Building2, CheckCircle, GraduationCap]
+  const valueIcons = [ShieldCheck, Star, Handshake, Leaf]
+
   const toggleLanguage = () => {
     setLanguage(language === "en" ? "fr" : "en")
   }
@@ -277,7 +292,6 @@ function App() {
     const formData = new FormData(e.target)
     const data = Object.fromEntries(formData)
 
-    // Get selected services
     const services = []
     t.services.items.forEach((service, index) => {
       if (data[`service-${index}`]) {
@@ -291,12 +305,14 @@ function App() {
 
   return (
     <div className="App">
-      {/* Navigation */}
       <nav className="navbar">
         <div className="nav-container">
           <div className="nav-brand">
-            <div className="logo">CS</div>
-            <span className="company-name">CyberSC</span>
+            <img src="/cybersc-logo-shield-cybersecurity.jpg" alt="CyberSC Logo" className="logo-img" />
+            <span className="company-name">
+              <span className="cyber-text">Cyber</span>
+              <span className="sc-text">SC</span>
+            </span>
           </div>
           <button className="mobile-menu-btn" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
             ☰
@@ -331,10 +347,12 @@ function App() {
         </div>
       </nav>
 
-      {/* Hero Section */}
       <section id="home" className="hero-section">
         <div className="hero-content">
-          <h1>{t.hero.title}</h1>
+          <img src="/cybersc-logo-shield-cybersecurity.jpg" alt="CyberSC Logo" className="hero-logo" />
+          <h1>
+            <span className="cyber-text">Cyber</span> <span className="sc-text">Strategic Consulting</span>
+          </h1>
           <h2>{t.hero.subtitle}</h2>
           <p>{t.hero.description}</p>
           <div className="hero-buttons">
@@ -348,40 +366,50 @@ function App() {
         </div>
       </section>
 
-      {/* Section Divider */}
       <div className="section-divider"></div>
 
-      {/* Services Section */}
       <section id="services" className="services-section">
         <div className="section-header">
           <h2>{t.services.title}</h2>
           <p>{t.services.subtitle}</p>
         </div>
         <div className="services-grid">
-          {t.services.items.map((service, index) => (
-            <div key={index} className="service-card" onClick={() => scrollToSection(`service-${index}`)}>
-              <div className="service-icon">{["🔒", "🎯", "🎣", "🏗️", "✅", "🎓"][index]}</div>
-              <h3>{service.title}</h3>
-              <p>{service.description.substring(0, 150)}...</p>
-            </div>
-          ))}
+          {t.services.items.map((service, index) => {
+            const IconComponent = serviceIcons[index]
+            return (
+              <div key={index} className="service-card" onClick={() => scrollToSection(`service-${index}`)}>
+                <div className="service-icon">
+                  <IconComponent size={28} strokeWidth={2} />
+                </div>
+                <h3>{service.title}</h3>
+                <p>{service.description.substring(0, 150)}...</p>
+              </div>
+            )
+          })}
         </div>
       </section>
 
-      {/* Service Details Section */}
       <section className="service-details-section">
         {t.services.items.map((service, index) => (
           <div key={index} id={`service-${index}`} className="service-detail">
-            <h3>{service.title}</h3>
-            <p>{service.description}</p>
+            <div className="service-detail-content">
+              <div className="service-detail-text">
+                <h3>{service.title}</h3>
+                <p>{service.description}</p>
+              </div>
+              <div className="service-detail-image">
+                <img
+                  src={`/.jpg?key=y2cir&key=ytj8b&height=300&width=400&query=${service.title} cybersecurity illustration`}
+                  alt={service.title}
+                />
+              </div>
+            </div>
           </div>
         ))}
       </section>
 
-      {/* Section Divider */}
       <div className="section-divider"></div>
 
-      {/* About Section */}
       <section id="about" className="about-section">
         <div className="about-content">
           <div className="section-header">
@@ -406,21 +434,24 @@ function App() {
           </div>
 
           <div className="values-grid">
-            {t.about.values.map((value, index) => (
-              <div key={index} className="value-card">
-                <div className="value-icon">{["🛡️", "⭐", "🤝", "🍁"][index]}</div>
-                <h4>{value.title}</h4>
-                <p>{value.description}</p>
-              </div>
-            ))}
+            {t.about.values.map((value, index) => {
+              const IconComponent = valueIcons[index]
+              return (
+                <div key={index} className="value-card">
+                  <div className="value-icon">
+                    <IconComponent size={40} strokeWidth={2} />
+                  </div>
+                  <h4>{value.title}</h4>
+                  <p>{value.description}</p>
+                </div>
+              )
+            })}
           </div>
         </div>
       </section>
 
-      {/* Section Divider */}
       <div className="section-divider"></div>
 
-      {/* Contact Section */}
       <section id="contact" className="contact-section">
         <div className="section-header">
           <h2>{t.contact.title}</h2>
@@ -464,10 +495,8 @@ function App() {
         </form>
       </section>
 
-      {/* Section Divider */}
       <div className="section-divider"></div>
 
-      {/* Testimonials Section */}
       <section className="testimonials-section">
         <div className="section-header">
           <h2>{t.testimonials.title}</h2>
@@ -483,7 +512,6 @@ function App() {
         </div>
       </section>
 
-      {/* Footer */}
       <footer className="footer">
         <div className="footer-content">
           <div className="footer-section">
@@ -524,12 +552,6 @@ function App() {
             <div className="social-links">
               <a href="https://linkedin.com" className="social-icon" target="_blank" rel="noopener noreferrer">
                 in
-              </a>
-              <a href="https://twitter.com" className="social-icon" target="_blank" rel="noopener noreferrer">
-                𝕏
-              </a>
-              <a href="https://facebook.com" className="social-icon" target="_blank" rel="noopener noreferrer">
-                f
               </a>
             </div>
           </div>
