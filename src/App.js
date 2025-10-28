@@ -43,31 +43,37 @@ function App() {
             title: "Penetration Testing",
             description:
               "Our penetration testing services simulate real-world cyberattacks to identify vulnerabilities in your systems before malicious actors can exploit them. We conduct thorough assessments of your networks, applications, clouds, and infrastructures, providing detailed reports with actionable remediation strategies to strengthen your security posture.",
+            image: "Penetration_Testing.png"
           },
           {
             title: "Threat Modeling",
             description:
               "We help you understand and anticipate potential security threats through comprehensive threat modeling. Our experts analyze your business processes, identify critical assets, and map potential attack vectors. This proactive approach enables you to prioritize security investments and implement effective countermeasures before threats materialize.",
+            image: "Threat_Modeling.png"
           },
           {
             title: "Phishing Simulation",
             description:
               "Human error remains one of the biggest security risks. Our phishing simulation campaigns test your employees' awareness and response to social engineering attacks. We provide realistic scenarios, track engagement metrics, and deliver targeted training to build a security-conscious culture within your organization.",
+            image: "Phishing_Simulation.png"
           },
           {
             title: "Architecture Review",
             description:
               "Our security architecture review service examines your IT infrastructure design to ensure it follows industry best practices and security principles. We evaluate your network topology, cloud configurations, access controls, and data flow to identify architectural weaknesses and recommend improvements that enhance both security and operational efficiency.",
+            image: "Architecture_Review.png"
           },
           {
             title: "Compliance Assurance",
             description:
               "Navigate complex regulatory requirements with confidence. We provide comprehensive compliance assessments and ongoing support for standards including PIPEDA, SOC 2, ISO 27001, and industry-specific regulations. Our team ensures your security controls meet regulatory requirements while maintaining operational flexibility.",
+            image: "Compliance_Assurance.png"
           },
           {
             title: "Tailored Solutions & Trainings",
             description:
               "Every organization has unique security needs. We develop customized cybersecurity solutions and training programs tailored to your specific industry, risk profile, and business objectives. From executive briefings to hands-on technical workshops, we empower your team with the knowledge and tools needed to maintain robust security practices.",
+            image: "Tailored_Solutions_Trainings.png"
           },
         ],
       },
@@ -167,31 +173,37 @@ function App() {
             title: "Tests d'Intrusion",
             description:
               "Nos services de tests d'intrusion simulent des cyberattaques réelles afin d'identifier les vulnérabilités de vos systèmes avant qu'elles ne puissent être exploitées par des acteurs malveillants. Nous réalisons des évaluations approfondies de vos réseaux, applications, environnements infonuagiques et infrastructures, et fournissons des rapports détaillés accompagnés de stratégies de remédiation concrètes pour renforcer votre posture de cybersécurité.",
+            image: "Penetration_Testing.png"
           },
           {
             title: "Modélisation des Menaces",
             description:
               "Nous vous aidons à comprendre et à anticiper les menaces de sécurité potentielles grâce à une modélisation complète des menaces. Nos experts analysent vos processus d'affaires, identifient les actifs critiques et cartographient les vecteurs d'attaque possibles. Cette approche proactive vous permet de prioriser vos investissements en cybersécurité et de mettre en œuvre des contre-mesures efficaces avant que les menaces ne se concrétisent.",
+            image: "Threat_Modeling.png"
           },
           {
             title: "Simulation d'Hameçonnage",
             description:
               "L'erreur humaine demeure l'un des principaux risques en cybersécurité. Nos campagnes de simulation d'hameçonnage évaluent la sensibilisation et la réactivité de vos employés face aux attaques d'ingénierie sociale. Nous proposons des scénarios réalistes, suivons les indicateurs d'engagement et offrons une formation ciblée afin de bâtir une culture organisationnelle axée sur la sécurité.",
+            image: "Phishing_Simulation.png"
           },
           {
             title: "Révision d'Architecture",
             description:
               "Notre service de révision d'architecture de sécurité analyse la conception de votre infrastructure informatique afin de garantir sa conformité aux meilleures pratiques et aux principes de sécurité de l'industrie. Nous évaluons la topologie de votre réseau, vos configurations infonuagiques, vos contrôles d'accès et vos flux de données pour identifier les faiblesses architecturales et recommander des améliorations renforçant à la fois la sécurité et l'efficacité opérationnelle.",
+            image: "Architecture_Review.png"
           },
           {
             title: "Assurance de Conformité",
             description:
               "Naviguez avec confiance dans la complexité des exigences réglementaires. Nous offrons des évaluations de conformité complètes et un accompagnement continu pour les cadres tels que PIPEDA, SOC 2, ISO 27001 et d'autres réglementations propres à votre secteur. Notre équipe veille à ce que vos contrôles de sécurité répondent aux exigences réglementaires tout en préservant votre agilité opérationnelle.",
+            image: "Compliance_Assurance.png"
           },
           {
             title: "Solutions et Formations Sur Mesure",
             description:
               "Chaque organisation a des besoins de sécurité uniques. Nous concevons des solutions de cybersécurité sur mesure et des programmes de formation adaptés à votre secteur d'activité, à votre profil de risque et à vos objectifs d'affaires. Des séances d'information pour dirigeants aux ateliers techniques pratiques, nous donnons à votre équipe les connaissances et les outils nécessaires pour maintenir des pratiques de sécurité robustes et durables.",
+            image: "Tailored_Solutions_Trainings.png"
           },
         ],
       },
@@ -399,7 +411,7 @@ function App() {
               </div>
               <div className="service-detail-image">
                 <img
-                  src={`/.jpg?key=y2cir&key=ytj8b&height=300&width=400&query=${service.title} cybersecurity illustration`}
+                  src={`/${service.image}`}
                   alt={service.title}
                 />
               </div>

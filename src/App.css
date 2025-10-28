@@ -113,10 +113,10 @@
   max-width: 900px;
 }
 
-/* Added hero logo styles */
+/* Added hero logo styles - INCREASED TO 200PX (200% BIGGER) */
 .hero-logo {
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
   margin-bottom: 2rem;
   filter: drop-shadow(0 4px 10px rgba(242, 109, 40, 0.3));
 }
@@ -188,7 +188,7 @@
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  background-image: url("/Section_Divider_4.jpg");
+  background-image: url("Background.jpg");
 }
 
 /* Services Section */
