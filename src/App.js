@@ -73,7 +73,7 @@ function App() {
             title: "Tailored Solutions & Trainings",
             description:
               "Every organization has unique security needs. We develop customized cybersecurity solutions and training programs tailored to your specific industry, risk profile, and business objectives. From executive briefings to hands-on technical workshops, we empower your team with the knowledge and tools needed to maintain robust security practices.",
-            image: "Tailored_Solutions_Trainings.png"
+            image: "Tailored_Solutions.png"
           },
         ],
       },
