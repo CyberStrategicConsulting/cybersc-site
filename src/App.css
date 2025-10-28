@@ -1,5 +1,6 @@
 :root {
-  --primary-orange: #eb7022;
+  /* Updated color scheme to match CyberSC brand colors */
+  --primary-orange: #f26d28;
   --dark-teal: #0f2228;
   --gray: #818286;
   --light-gray: #f1f5f6;
@@ -17,8 +18,9 @@
   top: 0;
   left: 0;
   right: 0;
-  background-color: var(--white);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  /* Changed navbar to darker color */
+  background-color: var(--dark-teal);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
   z-index: 1000;
   padding: 1rem 2rem;
 }
@@ -37,23 +39,26 @@
   gap: 1rem;
 }
 
-.logo {
+/* Updated logo styles for image */
+.logo-img {
   width: 50px;
   height: 50px;
-  background-color: var(--primary-orange);
   border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  color: var(--white);
-  font-size: 1.5rem;
+  object-fit: contain;
 }
 
+/* Updated company name with color split */
 .company-name {
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--dark-teal);
+}
+
+.cyber-text {
+  color: var(--primary-orange);
+}
+
+.sc-text {
+  color: var(--white);
 }
 
 .nav-links {
@@ -65,7 +70,8 @@
 
 .nav-links a {
   text-decoration: none;
-  color: var(--dark-teal);
+  /* Changed nav link color to white for dark navbar */
+  color: var(--white);
   font-weight: 500;
   transition: color 0.3s;
 }
@@ -75,19 +81,19 @@
 }
 
 .language-toggle {
-  background-color: var(--light-gray);
+  background-color: var(--primary-orange);
   border: none;
   padding: 0.5rem 1rem;
   border-radius: 20px;
   cursor: pointer;
   font-weight: 600;
-  color: var(--dark-teal);
+  color: var(--white);
   transition: all 0.3s;
 }
 
 .language-toggle:hover {
-  background-color: var(--primary-orange);
-  color: var(--white);
+  background-color: #d66320;
+  transform: scale(1.05);
 }
 
 /* Hero Section */
@@ -105,6 +111,14 @@
 
 .hero-content {
   max-width: 900px;
+}
+
+/* Added hero logo styles - INCREASED TO 200PX (200% BIGGER) */
+.hero-logo {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 2rem;
+  filter: drop-shadow(0 4px 10px rgba(242, 109, 40, 0.3));
 }
 
 .hero-content h1 {
@@ -154,7 +168,7 @@
 .btn-primary:hover {
   background-color: #d66320;
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(235, 112, 34, 0.4);
+  box-shadow: 0 5px 15px rgba(242, 109, 40, 0.4);
 }
 
 .btn-secondary {
@@ -174,6 +188,7 @@
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  background-image: url("Background.jpg");
 }
 
 /* Services Section */
@@ -219,19 +234,20 @@
 
 .service-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(235, 112, 34, 0.2);
+  box-shadow: 0 8px 25px rgba(242, 109, 40, 0.2);
 }
 
+/* Updated service icon with dimmer background and icon color */
 .service-icon {
   width: 60px;
   height: 60px;
-  background-color: var(--primary-orange);
+  background-color: rgba(242, 109, 40, 0.15);
   border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 1.5rem;
-  font-size: 1.8rem;
+  color: var(--primary-orange);
 }
 
 .service-card h3 {
@@ -253,12 +269,38 @@
 }
 
 .service-detail {
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto 4rem;
-  padding: 3rem;
   background-color: var(--light-gray);
   border-radius: 12px;
   border-left: 5px solid var(--primary-orange);
+  overflow: hidden;
+}
+
+/* Added layout for service detail with image */
+.service-detail-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.service-detail-text {
+  flex: 1;
+  min-width: 300px;
+  padding: 3rem;
+}
+
+.service-detail-image {
+  flex: 1;
+  min-width: 300px;
+  padding: 2rem;
+}
+
+.service-detail-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
 }
 
 .service-detail h3 {
@@ -305,9 +347,10 @@
   line-height: 1.8;
 }
 
+/* Updated values grid to 2x2 layout */
 .values-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
   margin-top: 3rem;
 }
@@ -320,9 +363,13 @@
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
+/* Updated value icon to use icon color instead of emoji */
 .value-icon {
-  font-size: 3rem;
+  color: var(--primary-orange);
   margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .value-card h4 {
@@ -516,6 +563,7 @@
   color: var(--white);
   text-decoration: none;
   transition: all 0.3s;
+  font-weight: bold;
 }
 
 .social-icon:hover {
@@ -552,7 +600,8 @@
   background: none;
   border: none;
   font-size: 1.5rem;
-  color: var(--dark-teal);
+  /* Changed mobile menu button color to white for dark navbar */
+  color: var(--white);
   cursor: pointer;
 }
 
@@ -564,10 +613,11 @@
     top: 100%;
     left: 0;
     right: 0;
-    background-color: var(--white);
+    /* Changed mobile menu background to dark */
+    background-color: var(--dark-teal);
     flex-direction: column;
     padding: 2rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   }
 
   .nav-links.active {
@@ -587,8 +637,12 @@
   }
 
   .services-grid,
-  .values-grid,
   .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Keep 2x2 grid on mobile for values, but make it 1 column on very small screens */
+  .values-grid {
     grid-template-columns: 1fr;
   }
 
@@ -598,5 +652,22 @@
 
   .footer-content {
     grid-template-columns: 1fr;
+  }
+
+  /* Stack service detail content on mobile */
+  .service-detail-content {
+    flex-direction: column;
+  }
+
+  .service-detail-text,
+  .service-detail-image {
+    min-width: 100%;
+  }
+}
+
+/* Tablet breakpoint for values grid */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
