@@ -171,7 +171,6 @@
 /* Section Divider */
 .section-divider {
   height: 300px;
-  background-image: url("/placeholder.svg?height=300&width=1920");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;

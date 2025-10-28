@@ -106,18 +106,18 @@ function App() {
         items: [
           {
             text: "CyberSC helped us identify critical vulnerabilities we never knew existed. Their penetration testing was thorough and their recommendations were practical and actionable.",
-            author: "Sarah Johnson",
-            company: "Tech Solutions Inc.",
+            author: "Anonymous",
+            company: "Network Solutions Industry",
           },
           {
             text: "The compliance assurance service from CyberSC made our SOC 2 certification process smooth and stress-free. Highly recommended!",
-            author: "Michael Chen",
-            company: "DataSecure Corp.",
+            author: "Anonymous",
+            company: "Small & Medium Business Owner",
           },
           {
             text: "Their phishing simulation training transformed our security culture. Employee awareness has increased dramatically since working with CyberSC.",
-            author: "Emily Rodriguez",
-            company: "Financial Services Group",
+            author: "Anonymous",
+            company: "Consulting Firm CEO",
           },
         ],
       },
@@ -230,18 +230,18 @@ function App() {
         items: [
           {
             text: "CyberSC nous a aidés à identifier des vulnérabilités critiques dont nous ignorions l'existence. Leurs tests d'intrusion étaient approfondis et leurs recommandations pratiques et réalisables.",
-            author: "Sarah Johnson",
-            company: "Tech Solutions Inc.",
+            author: "Anonime",
+            company: "Industrie des solutions réseau",
           },
           {
             text: "Le service d'assurance de conformité de CyberSC a rendu notre processus de certification SOC 2 fluide et sans stress. Hautement recommandé!",
-            author: "Michael Chen",
-            company: "DataSecure Corp.",
+            author: "Anonime",
+            company: "Propriétaire de PME",
           },
           {
             text: "Leur formation de simulation d'hameçonnage a transformé notre culture de sécurité. La sensibilisation des employés a considérablement augmenté depuis que nous travaillons avec CyberSC.",
-            author: "Emily Rodriguez",
-            company: "Financial Services Group",
+            author: "Anonime",
+            company: "PDG d'une société de conseil",
           },
         ],
       },
