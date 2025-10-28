@@ -363,7 +363,15 @@ function App() {
         <div className="hero-content">
           <img src="/CyberSC_Logo_Web.svg" alt="CyberSC Logo" className="hero-logo" />
           <h1>
-            <span className="cyber-text">Cyber</span> <span className="sc-text">Strategic Consulting</span>
+            {language === "en" ? (
+              <>
+                <span className="cyber-text">Cyber</span> <span className="sc-text">Strategic Consulting</span>
+              </>
+            ) : (
+              <>
+                <span className="cyber-text">Cyber</span> <span className="sc-text">Stratégie & Consultation</span>
+              </>
+            )}
           </h1>
           <h2>{t.hero.subtitle}</h2>
           <p>{t.hero.description}</p>
