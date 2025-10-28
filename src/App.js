@@ -308,7 +308,7 @@ function App() {
       <nav className="navbar">
         <div className="nav-container">
           <div className="nav-brand">
-            <img src="/cybersc-logo-shield-cybersecurity.jpg" alt="CyberSC Logo" className="logo-img" />
+            <img src="CyberSC_Logo_Web.svg" alt="CyberSC Logo" className="logo-img" />
             <span className="company-name">
               <span className="cyber-text">Cyber</span>
               <span className="sc-text">SC</span>
@@ -349,7 +349,7 @@ function App() {
 
       <section id="home" className="hero-section">
         <div className="hero-content">
-          <img src="/cybersc-logo-shield-cybersecurity.jpg" alt="CyberSC Logo" className="hero-logo" />
+          <img src="/CyberSC_Logo_Web.svg" alt="CyberSC Logo" className="hero-logo" />
           <h1>
             <span className="cyber-text">Cyber</span> <span className="sc-text">Strategic Consulting</span>
           </h1>
@@ -550,7 +550,7 @@ function App() {
           <div className="footer-section">
             <h3>{t.footer.followUs}</h3>
             <div className="social-links">
-              <a href="https://linkedin.com" className="social-icon" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.linkedin.com/company/cyber-strategic-consulting" className="social-icon" target="_blank" rel="noopener noreferrer">
                 in
               </a>
             </div>
