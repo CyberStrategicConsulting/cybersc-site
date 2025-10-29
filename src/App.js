@@ -517,6 +517,7 @@ function App() {
 
       <div className="section-divider"></div>
 
+      {/* Testimonials section temporarily hidden - placeholder content not ready for display
       <section className="testimonials-section">
         <div className="section-header">
           <h2>{t.testimonials.title}</h2>
@@ -531,6 +532,7 @@ function App() {
           ))}
         </div>
       </section>
+      */}
 
       <footer className="footer">
         <div className="footer-content">
