@@ -654,19 +654,18 @@ function App() {
             <div className="modal-body">
               {language === "en" ? (
                 <>
-                  <p><strong>Last Updated: November 2025</strong></p>
+                  <p><strong>Last Updated: November 5, 2025</strong></p>
 
-                  <h3>1. Information We Collect</h3>
-                  <p>When you contact us through our website, we collect the following information:</p>
-                  <ul>
-                    <li>Name</li>
-                    <li>Email address</li>
-                    <li>Phone number (optional)</li>
-                    <li>Company name (optional)</li>
-                    <li>Message content</li>
-                  </ul>
+                  <p>At CyberSC, protecting your personal information is a top priority. This privacy policy explains how we collect, use, disclose, and protect your personal information, in accordance with Quebec's Act Respecting the Protection of Personal Information in the Private Sector (Law 25).</p>
 
-                  <h3>2. How We Use Your Information</h3>
+                  <p>Our privacy policies and procedures only apply to personal information about identifiable individuals. They do not apply to business information.</p>
+
+                  <h3>Privacy Officer</h3>
+                  <p>If you have any questions or requests regarding your personal information, you can contact our Privacy Officer Ian at <a href="mailto:ian@cybersc.ca">ian@cybersc.ca</a></p>
+
+                  <h3>What Data We Collect and Why</h3>
+                  <p>Whenever possible and appropriate, we collect your personal information from you directly or from persons whom you have requested to provide us with information. When you fill out a form on our website, we collect the information you provide (e.g., name, email address, phone number, company, etc.), as well as your IP address.</p>
+
                   <p>We use the information you provide to:</p>
                   <ul>
                     <li>Respond to your inquiries</li>
@@ -675,64 +674,113 @@ function App() {
                     <li>Comply with legal obligations</li>
                   </ul>
 
-                  <h3>3. Data Protection</h3>
+                  <h3>Cookies</h3>
+                  <p>We may use cookies to:</p>
+                  <ul>
+                    <li>remember your preferences,</li>
+                    <li>enhance your browsing experience,</li>
+                    <li>analyze website performance.</li>
+                  </ul>
+                  <p>You may disable cookies in your browser settings; however, some features of the site may no longer function properly if you do so.</p>
+
+                  <h3>Data Analytics</h3>
+                  <p>We may use analytics tools (such as Umami Analytics) to better understand how our website is used. These tools may collect anonymized data such as your IP address, device type, operating system, and pages visited.</p>
+
+                  <h3>Data Protection</h3>
                   <p>CyberSC is committed to protecting your personal information. We implement industry-standard security measures to safeguard your data against unauthorized access, alteration, disclosure, or destruction.</p>
 
-                  <h3>4. Third-Party Services</h3>
-                  <p>We use EmailJS to process contact form submissions. Your data is transmitted securely and is subject to their privacy policy.</p>
-
-                  <h3>5. Your Rights</h3>
-                  <p>Under Canadian privacy laws (PIPEDA), you have the right to:</p>
+                  <h3>Your Rights</h3>
+                  <p>Under Law 25, you have the right to:</p>
                   <ul>
-                    <li>Access your personal information</li>
-                    <li>Request corrections to your data</li>
-                    <li>Withdraw consent for data processing</li>
-                    <li>Request deletion of your information</li>
+                    <li>request access to your personal information,</li>
+                    <li>request corrections to your personal information,</li>
+                    <li>withdraw your consent to its use,</li>
+                    <li>request the deletion of your personal information, except where retention is required by law.</li>
                   </ul>
 
-                  <h3>6. Contact Us</h3>
-                  <p>For privacy-related inquiries, please contact us at: info@cybersc.ca</p>
+                  <p>To exercise these rights, please contact our Privacy Officer. We may obtain your consent to our collection, use and disclosure of your personal information either expressly, for stated purposes, or impliedly when the purposes are indicated by the relevant circumstances or follow logically from other stated purposes. By providing us with personal information, you consent to the collection, use and disclosure of information relating to providing our services, managing our relationship with you, administering our business and as permitted or required by law, in accordance with this Privacy Policy.</p>
+
+                  <p>We will seek your consent as required by law before using personal information for any purpose beyond the scope of your original consent. You may withdraw your consent at any time, subject to legal and contractual restrictions and reasonable notice.</p>
+
+                  <h3>Retention of your Personal Information</h3>
+                  <p>We only retain your personal data for as long as necessary to fulfill the purposes identified in this Privacy Policy or as long as required for our legal or business purposes.</p>
+
+                  <h3>Data Hosting</h3>
+                  <p>Your data may be hosted outside of Quebec. In such cases, we ensure that your personal information is protected with safeguards equivalent to those required under Law 25.</p>
+
+                  <h3>Disclosure to Third Parties</h3>
+                  <p>We use EmailJS to process contact form submissions. Your data is transmitted securely and is subject to their privacy policy. We do not share your personal information with third parties without your consent, except when required by law or for security reasons.</p>
+
+                  <h3>Changes to this Privacy Policy</h3>
+                  <p>We regularly review our privacy policies and procedures. Therefore, we may amend this Privacy Policy from time to time. The most current version of our Privacy Policy will be posted on our website at <a href="http://www.cybersc.ca">www.cybersc.ca</a>. Regardless of any changes we make to our Privacy Policy, we will only use your personal information in accordance with industry best practices.</p>
+
+                  <h3>Contact Us</h3>
+                  <p>For additional inquiries, please contact us at: <a href="mailto:info@cybersc.ca">info@cybersc.ca</a></p>
                 </>
               ) : (
                 <>
-                  <p><strong>Dernière mise à jour : Novembre 2025</strong></p>
+                  <p><strong>Dernière mise à jour : 5 novembre 2025</strong></p>
 
-                  <h3>1. Informations que nous collectons</h3>
-                  <p>Lorsque vous nous contactez via notre site Web, nous collectons les informations suivantes :</p>
-                  <ul>
-                    <li>Nom</li>
-                    <li>Adresse courriel</li>
-                    <li>Numéro de téléphone (facultatif)</li>
-                    <li>Nom de l'entreprise (facultatif)</li>
-                    <li>Contenu du message</li>
-                  </ul>
+                  <p>Chez CyberSC, la protection de vos renseignements personnels est une priorité absolue. La présente politique de confidentialité explique comment nous recueillons, utilisons, divulguons et protégeons vos renseignements personnels, conformément à la Loi sur la protection des renseignements personnels dans le secteur privé du Québec (Loi 25).</p>
 
-                  <h3>2. Comment nous utilisons vos informations</h3>
+                  <p>Nos politiques et procédures en matière de confidentialité s'appliquent uniquement aux renseignements personnels concernant des personnes identifiables. Elles ne s'appliquent pas aux renseignements d'affaires.</p>
+
+                  <h3>Responsable de la protection des renseignements personnels</h3>
+                  <p>Pour toute question ou demande concernant vos renseignements personnels, vous pouvez contacter notre responsable de la protection des renseignements personnels, Ian, à <a href="mailto:ian@cybersc.ca">ian@cybersc.ca</a></p>
+
+                  <h3>Quelles données nous recueillons et pourquoi</h3>
+                  <p>Lorsque cela est possible et approprié, nous recueillons vos renseignements personnels directement auprès de vous ou auprès de personnes que vous avez chargées de nous fournir des informations. Lorsque vous remplissez un formulaire sur notre site Web, nous recueillons les informations que vous fournissez (par exemple, nom, adresse courriel, numéro de téléphone, entreprise, etc.), ainsi que votre adresse IP.</p>
+
                   <p>Nous utilisons les informations que vous fournissez pour :</p>
                   <ul>
-                    <li>Répondre à vos demandes</li>
+                    <li>Répondre à vos demandes de renseignements</li>
                     <li>Fournir des services de consultation en cybersécurité</li>
                     <li>Envoyer des informations pertinentes sur nos services</li>
-                    <li>Respecter les obligations légales</li>
+                    <li>Respecter nos obligations légales</li>
                   </ul>
 
-                  <h3>3. Protection des données</h3>
-                  <p>CyberSC s'engage à protéger vos informations personnelles. Nous mettons en œuvre des mesures de sécurité conformes aux normes de l'industrie pour protéger vos données contre l'accès, la modification, la divulgation ou la destruction non autorisés.</p>
-
-                  <h3>4. Services tiers</h3>
-                  <p>Nous utilisons EmailJS pour traiter les soumissions de formulaires de contact. Vos données sont transmises de manière sécurisée et sont soumises à leur politique de confidentialité.</p>
-
-                  <h3>5. Vos droits</h3>
-                  <p>En vertu des lois canadiennes sur la protection de la vie privée (PIPEDA), vous avez le droit de :</p>
+                  <h3>Témoins (Cookies)</h3>
+                  <p>Nous pouvons utiliser des témoins pour :</p>
                   <ul>
-                    <li>Accéder à vos informations personnelles</li>
-                    <li>Demander des corrections à vos données</li>
-                    <li>Retirer votre consentement au traitement des données</li>
-                    <li>Demander la suppression de vos informations</li>
+                    <li>mémoriser vos préférences,</li>
+                    <li>améliorer votre expérience de navigation,</li>
+                    <li>analyser les performances du site Web.</li>
+                  </ul>
+                  <p>Vous pouvez désactiver les témoins dans les paramètres de votre navigateur; toutefois, certaines fonctionnalités du site pourraient ne plus fonctionner correctement si vous le faites.</p>
+
+                  <h3>Analytique de données</h3>
+                  <p>Nous pouvons utiliser des outils d'analyse (tels que Umami Analytics) pour mieux comprendre comment notre site Web est utilisé. Ces outils peuvent collecter des données anonymisées telles que votre adresse IP, le type d'appareil, le système d'exploitation et les pages visitées.</p>
+
+                  <h3>Protection des données</h3>
+                  <p>CyberSC s'engage à protéger vos renseignements personnels. Nous mettons en œuvre des mesures de sécurité conformes aux normes de l'industrie pour protéger vos données contre l'accès, la modification, la divulgation ou la destruction non autorisés.</p>
+
+                  <h3>Vos droits</h3>
+                  <p>En vertu de la Loi 25, vous avez le droit de :</p>
+                  <ul>
+                    <li>demander l'accès à vos renseignements personnels,</li>
+                    <li>demander des corrections à vos renseignements personnels,</li>
+                    <li>retirer votre consentement à leur utilisation,</li>
+                    <li>demander la suppression de vos renseignements personnels, sauf lorsque la conservation est requise par la loi.</li>
                   </ul>
 
-                  <h3>6. Nous contacter</h3>
-                  <p>Pour les demandes liées à la confidentialité, veuillez nous contacter à : info@cybersc.ca</p>
+                  <p>Pour exercer ces droits, veuillez contacter notre responsable de la protection des renseignements personnels. Nous pouvons obtenir votre consentement à notre collecte, utilisation et divulgation de vos renseignements personnels soit expressément, à des fins déclarées, soit implicitement lorsque les fins sont indiquées par les circonstances pertinentes ou découlent logiquement d'autres fins déclarées. En nous fournissant des renseignements personnels, vous consentez à la collecte, à l'utilisation et à la divulgation d'informations relatives à la fourniture de nos services, à la gestion de notre relation avec vous, à l'administration de nos affaires et tel que permis ou exigé par la loi, conformément à la présente politique de confidentialité.</p>
+
+                  <p>Nous demanderons votre consentement tel qu'exigé par la loi avant d'utiliser des renseignements personnels à toute fin dépassant la portée de votre consentement initial. Vous pouvez retirer votre consentement en tout temps, sous réserve de restrictions légales et contractuelles et d'un préavis raisonnable.</p>
+
+                  <h3>Conservation de vos renseignements personnels</h3>
+                  <p>Nous ne conservons vos données personnelles que pendant la durée nécessaire pour atteindre les fins identifiées dans la présente politique de confidentialité ou aussi longtemps que l'exigent nos besoins juridiques ou commerciaux.</p>
+
+                  <h3>Hébergement des données</h3>
+                  <p>Vos données peuvent être hébergées à l'extérieur du Québec. Dans de tels cas, nous veillons à ce que vos renseignements personnels soient protégés par des garanties équivalentes à celles requises en vertu de la Loi 25.</p>
+
+                  <h3>Divulgation à des tiers</h3>
+                  <p>Nous utilisons EmailJS pour traiter les soumissions de formulaires de contact. Vos données sont transmises de manière sécurisée et sont soumises à leur politique de confidentialité. Nous ne partageons pas vos renseignements personnels avec des tiers sans votre consentement, sauf lorsque la loi l'exige ou pour des raisons de sécurité.</p>
+
+                  <h3>Modifications à la présente politique de confidentialité</h3>
+                  <p>Nous révisons régulièrement nos politiques et procédures en matière de confidentialité. Par conséquent, nous pouvons modifier la présente politique de confidentialité de temps à autre. La version la plus récente de notre politique de confidentialité sera publiée sur notre site Web à l'adresse <a href="http://www.cybersc.ca">www.cybersc.ca</a>. Indépendamment de toute modification que nous apportons à notre politique de confidentialité, nous n'utiliserons vos renseignements personnels que conformément aux meilleures pratiques de l'industrie.</p>
+
+                  <h3>Nous contacter</h3>
+                  <p>Pour toute demande supplémentaire, veuillez nous contacter à : <a href="mailto:info@cybersc.ca">info@cybersc.ca</a></p>
                 </>
               )}
             </div>
