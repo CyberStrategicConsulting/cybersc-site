@@ -14,6 +14,8 @@ You've deployed Umami to Railway. Now follow these steps to connect your website
 
 **This is your analytics dashboard URL!** Bookmark it.
 
+umami-production-495d.up.railway.app
+
 ---
 
 ## Step 2: Login to Umami
