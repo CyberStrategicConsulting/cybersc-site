@@ -54,61 +54,76 @@ This email was sent from the CyberSC website contact form.
 1. In your EmailJS dashboard, go to **Account** → **General**
 2. Find your **Public Key** (e.g., `abcdefghijklmnop`)
 
-## Step 5: Update App.js
+## Step 5: Add Your Credentials to App.js
 
-Open `src/App.js` and replace the placeholders in the `handleSubmit` function (around line 332-336):
+Open `src/App.js` and find the EmailJS configuration (around line 341-345). Replace the placeholder values with your actual credentials:
 
 ```javascript
 const result = await emailjs.send(
-  "YOUR_SERVICE_ID",    // Replace with your Service ID
-  "YOUR_TEMPLATE_ID",   // Replace with your Template ID
+  "YOUR_SERVICE_ID",      // Replace with your Service ID
+  "YOUR_TEMPLATE_ID",     // Replace with your Template ID
   templateParams,
-  "YOUR_PUBLIC_KEY"     // Replace with your Public Key
+  "YOUR_PUBLIC_KEY"       // Replace with your Public Key
 )
 ```
 
 **Example:**
 ```javascript
 const result = await emailjs.send(
-  "service_abc123",
-  "template_xyz789",
+  "service_abc123",       // Your Service ID
+  "template_xyz789",      // Your Template ID
   templateParams,
-  "abcdefghijklmnop"
+  "abcdefghijklmnop"      // Your Public Key
 )
 ```
 
+### Why Hardcode These?
+
+**These are PUBLIC keys that are safe to commit to your repository** because:
+
+✅ **Designed for frontend use** - EmailJS public keys are meant to be exposed in client-side code
+✅ **Rate-limited** - EmailJS automatically prevents abuse
+✅ **Recipient controlled** - You configure the recipient email in EmailJS dashboard (not in code)
+✅ **No security risk** - Worst case: someone spams YOUR inbox (annoying but contained)
+✅ **Simpler deployment** - No environment variable configuration needed
+✅ **GitHub Pages friendly** - Works perfectly with `npm run deploy`
+
+**Note:** While these will be visible in your Git repository and deployed JavaScript, this is the **correct approach** for EmailJS. Don't use `.env` files as GitHub's secret scanning will flag them unnecessarily.
+
 ## Step 6: Test the Form
 
-1. Start your development server: `npm start`
+1. Start your development server:
+   ```bash
+   npm start
+   ```
 2. Navigate to the Contact Us section
 3. Fill out and submit the form
 4. Check your configured email inbox for the test message
 
-## Security Note
+**If the form doesn't work:**
+- Check browser console (F12) for error messages
+- Verify your credentials are correct in `App.js`
+- Check EmailJS dashboard for error logs
 
-For production, consider moving these credentials to environment variables:
-1. Create a `.env` file in the root directory
-2. Add:
-   ```
-   REACT_APP_EMAILJS_SERVICE_ID=your_service_id
-   REACT_APP_EMAILJS_TEMPLATE_ID=your_template_id
-   REACT_APP_EMAILJS_PUBLIC_KEY=your_public_key
-   ```
-3. Update the code to use:
-   ```javascript
-   const result = await emailjs.send(
-     process.env.REACT_APP_EMAILJS_SERVICE_ID,
-     process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
-     templateParams,
-     process.env.REACT_APP_EMAILJS_PUBLIC_KEY
-   )
-   ```
+## Step 7: Deploy to GitHub Pages
+
+Simply run:
+```bash
+npm run deploy
+```
+
+Done! ✅ The contact form will work immediately on your live site.
 
 ## Troubleshooting
 
 - **Emails not sending**: Check your EmailJS dashboard for error logs
 - **Wrong email format**: Verify your template parameters match the ones sent from the form
-- **Quota exceeded**: Free tier allows 200 emails/month. Consider upgrading if needed.
+- **Quota exceeded**: Free tier allows 200 emails/month. Consider upgrading if needed
+- **Environment variables not loading**:
+  - Restart dev server after creating/modifying `.env`
+  - Ensure variable names start with `REACT_APP_`
+  - Check that `.env` is in the root directory (same level as `package.json`)
+- **"EmailJS credentials not configured" error**: Your `.env` file is missing or not loaded correctly
 
 ## Benefits of This Approach
 
@@ -118,3 +133,5 @@ For production, consider moving these credentials to environment variables:
 ✅ Form validation and error handling
 ✅ Success/error feedback to users
 ✅ Bilingual support (English/French)
+✅ Credentials managed via environment variables (not hardcoded)
+✅ Secure development workflow

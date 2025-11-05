@@ -336,11 +336,13 @@ function App() {
     }
 
     try {
+      // EmailJS credentials - these are PUBLIC keys safe to expose in frontend code
+      // They're rate-limited by EmailJS and only send to the configured recipient
       const result = await emailjs.send(
-        "service_blt460j",
-        "template_5lbjewk",
+        "service_blt460j",      // Service ID
+        "template_5lbjewk",     // Template ID
         templateParams,
-        "tMbkjcto0LJy4-j-U"
+        "tMbkjcto0LJy4-j-U"     // Public Key
       )
 
       console.log("Email sent successfully:", result)
@@ -652,7 +654,7 @@ function App() {
             <div className="modal-body">
               {language === "en" ? (
                 <>
-                  <p><strong>Last Updated: January 2025</strong></p>
+                  <p><strong>Last Updated: November 2025</strong></p>
 
                   <h3>1. Information We Collect</h3>
                   <p>When you contact us through our website, we collect the following information:</p>
@@ -693,7 +695,7 @@ function App() {
                 </>
               ) : (
                 <>
-                  <p><strong>Dernière mise à jour : Janvier 2025</strong></p>
+                  <p><strong>Dernière mise à jour : Novembre 2025</strong></p>
 
                   <h3>1. Informations que nous collectons</h3>
                   <p>Lorsque vous nous contactez via notre site Web, nous collectons les informations suivantes :</p>

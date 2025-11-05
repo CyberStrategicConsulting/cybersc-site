@@ -33,6 +33,12 @@ http://localhost:3000
 npm install --legacy-peer-deps
 npm run build # <--- this cannot fail; if it does, it cannot be pushed to prod
 
+# Push code to repo:
+git status # Make sure the proper files are shown as modified
+git add .
+git commit -m "<Add a message detailing the commit, i.e. what has changed>"
+git push origin
+
 # If no failures, push to prod
 npm run deploy
 ```
