@@ -18,7 +18,6 @@
   top: 0;
   left: 0;
   right: 0;
-  /* Changed navbar to darker color */
   background-color: var(--dark-teal);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
   z-index: 1000;
@@ -41,8 +40,8 @@
 
 /* Updated logo styles for image */
 .logo-img {
-  width: 50px;
-  height: 50px;
+  width: 75px;
+  height: 75px;
   border-radius: 8px;
   object-fit: contain;
 }
@@ -70,7 +69,6 @@
 
 .nav-links a {
   text-decoration: none;
-  /* Changed nav link color to white for dark navbar */
   color: var(--white);
   font-weight: 500;
   transition: color 0.3s;
@@ -113,11 +111,10 @@
   max-width: 900px;
 }
 
-/* Added hero logo styles - INCREASED TO 230PX (15% BIGGER) */
 .hero-logo {
-  width: 230px;
-  height: 230px;
-  margin-bottom: 2rem;
+  width: 300px;
+  height: 300px;
+  margin-bottom: 0rem;
   filter: drop-shadow(0 4px 10px rgba(242, 109, 40, 0.3));
 }
 
@@ -237,7 +234,6 @@
   box-shadow: 0 8px 25px rgba(242, 109, 40, 0.2);
 }
 
-/* Updated service icon with dimmer background and icon color */
 .service-icon {
   width: 60px;
   height: 60px;
@@ -280,7 +276,6 @@
   overflow: hidden;
 }
 
-/* Added layout for service detail with image */
 .service-detail-content {
   display: flex;
   flex-wrap: wrap;
@@ -350,7 +345,6 @@
   line-height: 1.8;
 }
 
-/* Updated values grid to 2x2 layout */
 .values-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -366,7 +360,6 @@
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* Updated value icon to use icon color instead of emoji */
 .value-icon {
   color: var(--primary-orange);
   margin-bottom: 1rem;
@@ -628,9 +621,157 @@
   background: none;
   border: none;
   font-size: 1.5rem;
-  /* Changed mobile menu button color to white for dark navbar */
   color: var(--white);
   cursor: pointer;
+}
+
+/* Modal Styles - Consolidated */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+.modal-content {
+  background-color: var(--white);
+  border-radius: 12px;
+  position: relative;
+  max-width: 800px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  animation: modalFadeIn 0.3s ease-out;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  color: var(--gray);
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.modal-close:hover {
+  background-color: var(--light-gray);
+  color: var(--primary-orange);
+  transform: scale(1.1);
+}
+
+.modal-body {
+  padding: 2rem;
+  padding-top: 1rem;
+  color: var(--gray);
+  line-height: 1.8;
+}
+
+.modal-body h2 {
+  margin-bottom: 1.5rem;
+  color: var(--dark-teal);
+  font-size: 2rem;
+  padding-right: 2rem;
+}
+
+.modal-body h3 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: var(--primary-orange);
+  font-size: 1.3rem;
+}
+
+.modal-body p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.modal-body ul {
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.modal-body li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.modal-body strong {
+  color: var(--dark-teal);
+}
+
+.modal-body a {
+  color: var(--primary-orange);
+  text-decoration: none;
+}
+
+.modal-body a:hover {
+  text-decoration: underline;
+}
+
+/* Service Modal Specific Styles */
+.service-modal {
+  max-width: 90vw;
+  max-height: 90vh;
+  width: auto;
+  overflow-y: auto;
+}
+
+.service-modal-body {
+  padding: 2rem;
+}
+
+.service-modal-body h2 {
+  margin-bottom: 1.5rem;
+  color: var(--dark-teal);
+  font-size: 2rem;
+  text-align: center;
+}
+
+.service-offering-image {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+  margin: 1.5rem 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.service-modal-body p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--gray);
+  margin-top: 1.5rem;
 }
 
 /* Responsive Design */
@@ -641,7 +782,6 @@
     top: 100%;
     left: 0;
     right: 0;
-    /* Changed mobile menu background to dark */
     background-color: var(--dark-teal);
     flex-direction: column;
     padding: 2rem;
@@ -669,7 +809,6 @@
     grid-template-columns: 1fr;
   }
 
-  /* Keep 2x2 grid on mobile for values, but make it 1 column on very small screens */
   .values-grid {
     grid-template-columns: 1fr;
   }
@@ -682,7 +821,6 @@
     grid-template-columns: 1fr;
   }
 
-  /* Stack service detail content on mobile */
   .service-detail-content {
     flex-direction: column;
   }
@@ -691,126 +829,56 @@
   .service-detail-image {
     min-width: 100%;
   }
+
+  .modal-content {
+    max-width: 95vw;
+    max-height: 95vh;
+    margin: 0.5rem;
+  }
+
+  .service-modal {
+    max-width: 95vw;
+  }
+
+  .modal-body {
+    padding: 1.5rem;
+  }
+
+  .service-modal-body {
+    padding: 1.5rem;
+  }
+
+  .service-modal-body h2 {
+    font-size: 1.5rem;
+  }
+
+  .service-modal-body p {
+    font-size: 1rem;
+  }
+
+  .modal-close {
+    font-size: 2rem;
+    padding: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .service-offering-image {
+    margin: 1rem 0;
+  }
+
+  .service-modal-body {
+    padding: 1rem;
+  }
+
+  .service-modal-body h2 {
+    font-size: 1.25rem;
+  }
 }
 
 /* Tablet breakpoint for values grid */
 @media (min-width: 769px) and (max-width: 1024px) {
   .values-grid {
     grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-/* Modal Styles */
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.7);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 2000;
-  padding: 1rem;
-  overflow-y: auto;
-}
-
-.modal-content {
-  background-color: var(--white);
-  border-radius: 12px;
-  max-width: 800px;
-  width: 100%;
-  max-height: 90vh;
-  overflow-y: auto;
-  position: relative;
-  padding: 2.5rem;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
-  animation: modalSlideIn 0.3s ease-out;
-}
-
-@keyframes modalSlideIn {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.modal-close {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  background: none;
-  border: none;
-  font-size: 2rem;
-  color: var(--gray);
-  cursor: pointer;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  transition: all 0.3s;
-}
-
-.modal-close:hover {
-  background-color: var(--light-gray);
-  color: var(--dark-teal);
-}
-
-.modal-content h2 {
-  color: var(--dark-teal);
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-  padding-right: 2rem;
-}
-
-.modal-content h3 {
-  color: var(--primary-orange);
-  font-size: 1.3rem;
-  margin-top: 1.5rem;
-  margin-bottom: 0.75rem;
-}
-
-.modal-body {
-  color: var(--gray);
-  line-height: 1.8;
-}
-
-.modal-body p {
-  margin-bottom: 1rem;
-}
-
-.modal-body ul {
-  margin-left: 1.5rem;
-  margin-bottom: 1rem;
-}
-
-.modal-body li {
-  margin-bottom: 0.5rem;
-}
-
-.modal-body strong {
-  color: var(--dark-teal);
-}
-
-/* Modal responsive */
-@media (max-width: 768px) {
-  .modal-content {
-    padding: 2rem 1.5rem;
-    max-height: 95vh;
-  }
-
-  .modal-content h2 {
-    font-size: 1.5rem;
-  }
-
-  .modal-content h3 {
-    font-size: 1.1rem;
   }
 }
