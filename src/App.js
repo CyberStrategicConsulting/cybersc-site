@@ -1,6 +1,4 @@
-"use client"
-
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import "./App.css"
 import emailjs from "@emailjs/browser"
 import {
@@ -23,7 +21,23 @@ function App() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [showPrivacyModal, setShowPrivacyModal] = useState(false)
   const [showTermsModal, setShowTermsModal] = useState(false)
-  
+  const [selectedService, setSelectedService] = useState(null)
+
+  // Map service index to offering image (null if not ready yet)
+  const serviceOfferingImages = {
+    0: "Penetration_Offering.jpg",      // Penetration Testing
+    1: null,                             // Threat Modeling (not ready)
+    2: null,                             // Phishing Simulation (not ready)
+    3: "Architecture_Offerings.jpg",     // Architecture Review
+    4: "Compliance_Offering.jpg",        // Compliance Assurance
+    5: null,                             // Tailored Solutions (not ready)
+  }
+
+  // Initialize EmailJS when component mounts
+  useEffect(() => {
+    emailjs.init("tMbkjcto0LJy4-j-U")
+  }, [])
+
   const translations = {
     en: {
       nav: {
@@ -325,7 +339,7 @@ function App() {
       }
     })
 
-        // Prepare template parameters for EmailJS
+    // Prepare template parameters for EmailJS
     const templateParams = {
       from_name: data.name,
       from_email: data.email,
@@ -336,13 +350,11 @@ function App() {
     }
 
     try {
-      // EmailJS credentials - these are PUBLIC keys safe to expose in frontend code
-      // They're rate-limited by EmailJS and only send to the configured recipient
+      // EmailJS send - no need to pass public key again as it's initialized
       const result = await emailjs.send(
         "service_blt460j",      // Service ID
         "template_5lbjewk",     // Template ID
-        templateParams,
-        "tMbkjcto0LJy4-j-U"     // Public Key
+        templateParams
       )
 
       console.log("Email sent successfully:", result)
@@ -382,22 +394,22 @@ function App() {
           </button>
           <ul className={`nav-links ${mobileMenuOpen ? "active" : ""}`}>
             <li>
-              <a href="#home" onClick={() => scrollToSection("home")}>
+              <a href="#home" onClick={(e) => { e.preventDefault(); scrollToSection("home"); }}>
                 {t.nav.home}
               </a>
             </li>
             <li>
-              <a href="#services" onClick={() => scrollToSection("services")}>
+              <a href="#services" onClick={(e) => { e.preventDefault(); scrollToSection("services"); }}>
                 {t.nav.services}
               </a>
             </li>
             <li>
-              <a href="#about" onClick={() => scrollToSection("about")}>
+              <a href="#about" onClick={(e) => { e.preventDefault(); scrollToSection("about"); }}>
                 {t.nav.about}
               </a>
             </li>
             <li>
-              <a href="#contact" onClick={() => scrollToSection("contact")}>
+              <a href="#contact" onClick={(e) => { e.preventDefault(); scrollToSection("contact"); }}>
                 {t.nav.contact}
               </a>
             </li>
@@ -462,7 +474,17 @@ function App() {
 
       <section className="service-details-section">
         {t.services.items.map((service, index) => (
-          <div key={index} id={`service-${index}`} className="service-detail">
+          <div
+            key={index}
+            id={`service-${index}`}
+            className={`service-detail ${serviceOfferingImages[index] ? 'clickable' : ''}`}
+            onClick={() => {
+              if (serviceOfferingImages[index]) {
+                setSelectedService(index)
+              }
+            }}
+            style={{ cursor: serviceOfferingImages[index] ? 'pointer' : 'default' }}
+          >
             <div className="service-detail-content">
               <div className="service-detail-text">
                 <h3>{service.title}</h3>
@@ -606,22 +628,22 @@ function App() {
             <h3>{t.footer.quickLinks}</h3>
             <ul className="footer-links">
               <li>
-                <a href="#home" onClick={() => scrollToSection("home")}>
+                <a href="#home" onClick={(e) => { e.preventDefault(); scrollToSection("home"); }}>
                   {t.nav.home}
                 </a>
               </li>
               <li>
-                <a href="#services" onClick={() => scrollToSection("services")}>
+                <a href="#services" onClick={(e) => { e.preventDefault(); scrollToSection("services"); }}>
                   {t.nav.services}
                 </a>
               </li>
               <li>
-                <a href="#about" onClick={() => scrollToSection("about")}>
+                <a href="#about" onClick={(e) => { e.preventDefault(); scrollToSection("about"); }}>
                   {t.nav.about}
                 </a>
               </li>
               <li>
-                <a href="#contact" onClick={() => scrollToSection("contact")}>
+                <a href="#contact" onClick={(e) => { e.preventDefault(); scrollToSection("contact"); }}>
                   {t.nav.contact}
                 </a>
               </li>
@@ -880,6 +902,23 @@ function App() {
                   <p>Pour toute question concernant ces Conditions d'utilisation, veuillez nous contacter à : info@cybersc.ca</p>
                 </>
               )}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Service Offering Modal */}
+      {selectedService !== null && serviceOfferingImages[selectedService] && (
+        <div className="modal-overlay" onClick={() => setSelectedService(null)}>
+          <div className="modal-content service-modal" onClick={(e) => e.stopPropagation()}>
+            <button className="modal-close" onClick={() => setSelectedService(null)}>×</button>
+            <h2>{t.services.items[selectedService].title}</h2>
+            <div className="service-modal-body">
+              <img
+                src={`/${serviceOfferingImages[selectedService]}`}
+                alt={t.services.items[selectedService].title}
+                className="service-offering-image"
+              />
             </div>
           </div>
         </div>
